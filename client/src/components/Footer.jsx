@@ -47,7 +47,7 @@ export default function FooterCom() {
                 >
                   Linkedin
                 </Footer.Link>
-                <Footer.Link href='#'>Discord</Footer.Link>
+                
               </Footer.LinkGroup>
             </div>
             <div>
@@ -55,6 +55,7 @@ export default function FooterCom() {
               <Footer.LinkGroup col>
                 <Footer.Link href='#'>Privacy Policy</Footer.Link>
                 <Footer.Link href='#'>Terms &amp; Conditions</Footer.Link>
+<Footer.Title title='This is Developed and maintained by SIMPLEIF AUTOMATION TECHNOLOGIES'
               </Footer.LinkGroup>
             </div>
           </div>
@@ -67,9 +68,10 @@ export default function FooterCom() {
             year={new Date().getFullYear()}
           />
           <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-            <Footer.Icon href='#' icon={BsFacebook}/>
-            <Footer.Icon href='#' icon={BsInstagram}/>
-            <Footer.Icon href='#' icon={BsTwitter}/>
+            
+            <Footer.Icon href='https://www.instagram.com/freshers.adda?igsh=dHdmMWx6anV1cTdz' icon={BsInstagram}/>
+<Footer.Icon href='https://t.me/jobfreshersadda' icon={BsInstagram}/>
+            
             <Footer.Icon href='https://www.linkedin.com/in/ramanjaneyalu-reddy-venna-4907382b7' icon={BsGithub}/>
             <Footer.Icon href='#' icon={BsDribbble}/>
 
