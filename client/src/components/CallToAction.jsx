@@ -9,10 +9,10 @@ export default function CallToAction() {
           projects?
         </h2>
         <p className='text-gray-500 my-2'>
-          Check our 100 js projects website and start building your own projects
+          Check our Instagram and telegram channels. You will get tons of projects.
         </p>
         <a
-          href='https://www.100jsprojects.com/'
+          href='https://t.me/jobfreshersadda'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -20,7 +20,7 @@ export default function CallToAction() {
             gradientDuoTone='purpleToPink'
             className='rounded-tl-xl rounded-bl-none rounded-br-xl w-full'
           >
-            100 JS Projects Website
+            Click here for beginners projects 
           </Button>
         </a>
       </div>
