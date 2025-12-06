@@ -17,7 +17,7 @@ export default function SignUp() {
       return setErrorMessage('Please fill out all fields.');
     }
     try {
-      setLoading(true);
+      setLoading(false);
       setErrorMessage(null);
       const res = await fetch(
         `${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`,
