@@ -26,14 +26,14 @@ export default function FooterCom() {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Freshers Adda
+                  About Us
                 </Footer.Link>
                 <Footer.Link
                   href='/about'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Freshers Adda
+                  Freshers Adda Linkedin
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
