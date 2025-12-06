@@ -21,7 +21,7 @@ app.use(
     origin:
       process.env.NODE_ENV === 'production'
         ? [
-            'https://freshers-addasa.vercel.app/sign-in',
+            'https://freshers-addasa.vercel.app',
             
             /\.vercel\.app$/,
           ]
