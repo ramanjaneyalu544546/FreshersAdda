@@ -55,7 +55,7 @@ export default function FooterCom() {
               <Footer.LinkGroup col>
                 <Footer.Link href='#'>Privacy Policy</Footer.Link>
                 <Footer.Link href='#'>Terms &amp; Conditions</Footer.Link>
-<Footer.Title title='This is Developed and maintained by SIMPLEIF AUTOMATION TECHNOLOGIES'
+<Footer.Title title='This is Developed and maintained by SIMPLEIF AUTOMATION TECHNOLOGIES'/>
               </Footer.LinkGroup>
             </div>
           </div>
