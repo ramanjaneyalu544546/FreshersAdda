@@ -21,7 +21,7 @@ app.use(
     origin:
       process.env.NODE_ENV === 'production'
         ? [
-            'https://blog-final-gshy-qdvwepo3l-ramanjaneyalu544546s-projects.vercel.app',
+            'https://freshers-addasa.vercel.app/sign-in',
             
             /\.vercel\.app$/,
           ]
