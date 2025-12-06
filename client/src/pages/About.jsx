@@ -6,20 +6,17 @@ export default function About() {
       <div className='max-w-2xl mx-auto p-3 text-center'>
         <div>
           <h1 className='text-3xl font font-semibold text-center my-7'>
-            About Sahand's Blog
+            About Freshers Adda 
           </h1>
           <div className='text-md text-gray-500 flex flex-col gap-6'>
             <p>
-              Welcome to Sahand's Blog! This blog was created by Sahand Ghavidel
-              as a personal project to share his thoughts and ideas with the
-              world. Sahand is a passionate developer who loves to write about
-              technology, coding, and everything in between.
+              Welcome to Freshers Adda India's first job hunting website without Ads 
             </p>
 
             <p>
-              On this blog, you'll find weekly articles and tutorials on topics
+              On this Website you'll find job postings, weekly articles and tutorials on topics
               such as web development, software engineering, and programming
-              languages. Sahand is always learning and exploring new
+              languages. We are always learning and exploring new
               technologies, so be sure to check back often for new content!
             </p>
 
