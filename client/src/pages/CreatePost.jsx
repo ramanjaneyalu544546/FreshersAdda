@@ -151,6 +151,14 @@ export default function CreatePost() {
           placeholder='Write something...'
           className='h-72 mb-12'
           required
+          modules={{
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['link', 'image'],  // Add these for hyperlink + image
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  }}
           onChange={(value) => {
             setFormData({ ...formData, content: value });
           }}
