@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home';
 import About from './pages/About';
 import SignIn from './pages/SignIn';
@@ -38,6 +39,7 @@ export default function App() {
         <Route path='/post/:postSlug' element={<PostPage />} />
       </Routes>
       <Footer />
+      <Analytics />
     </BrowserRouter>
   );
 }
