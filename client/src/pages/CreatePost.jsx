@@ -22,42 +22,53 @@ export default function CreatePost() {
 
   const navigate = useNavigate();
 
-  const handleUpdloadImage = async () => {
-    try {
-      if (!file) {
-        setImageUploadError('Please select an image');
-        return;
-      }
-      setImageUploadError(null);
-      const storage = getStorage(app);
-      const fileName = new Date().getTime() + '-' + file.name;
-      const storageRef = ref(storage, fileName);
-      const uploadTask = uploadBytesResumable(storageRef, file);
-      uploadTask.on(
-        'state_changed',
-        (snapshot) => {
-          const progress =
-            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          setImageUploadProgress(progress.toFixed(0));
-        },
-        (error) => {
-          setImageUploadError('Image upload failed');
-          setImageUploadProgress(null);
-        },
-        () => {
-          getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-            setImageUploadProgress(null);
-            setImageUploadError(null);
-            setFormData({ ...formData, image: downloadURL });
-          });
-        }
-      );
-    } catch (error) {
-      setImageUploadError('Image upload failed');
-      setImageUploadProgress(null);
-      console.log(error);
+  const handleUploadImage = async () => {
+  try {
+    if (!file) {
+      setImageUploadError('Please select an image');
+      return;
     }
-  };
+    setImageUploadError(null);
+    
+    const storage = getStorage(app);
+    const fileName = new Date().getTime() + '-' + file.name;
+    const storageRef = ref(storage, fileName);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+    
+    uploadTask.on(
+      'state_changed',
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setImageUploadProgress(progress.toFixed(0));
+      },
+      (error) => {
+        console.error('Upload error:', error);
+        setImageUploadError('Image upload failed');
+        setImageUploadProgress(null);
+      },
+      async () => {  // Fixed: use async here
+        try {
+          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+          setImageUploadProgress(null);
+          setImageUploadError(null);
+          setFormData({ ...formData, image: downloadURL });
+        } catch (downloadError) {
+          console.error('Download URL error:', downloadError);
+          setImageUploadError('Failed to get image URL');
+          setImageUploadProgress(null);
+        }
+      }
+    );
+  } catch (error) {
+    console.error('Upload failed:', error);
+    setImageUploadError('Image upload failed');
+    setImageUploadProgress(null);
+  }
+};
+      
+      
+          
+       
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
